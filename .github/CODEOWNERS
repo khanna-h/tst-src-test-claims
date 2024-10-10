@@ -5,5 +5,16 @@
 # the repo. Unless a later match takes precedence,
 # @global-owner1 and @global-owner2 will be requested for
 # review when someone opens a pull request.
-*       @global-owner1
-.github/workflows @kbhavik
+#*       @global-owner1
+
+# The codeowner file is owned by platform-eng team
+.github/CODEOWNERS @platform-eng
+
+# Below IAC workflows are owned by platform-eng team
+.github/workflows/iac-scan.yml @platform-eng
+
+# Below App workflows are owned by platform-eng team
+.github/workflows/AHP*.yml @platform-eng
+
+# Below build workflows are owned by product-admin team, update the codeowner file to input correct team name
+.github/workflows/build*.yml @<product_name>-admin
